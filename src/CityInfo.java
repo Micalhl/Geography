@@ -39,10 +39,10 @@ public class CityInfo {
                 throw new NullPointerException("name and city mustn't be null.");
             }
             if (name == null) {
-                throw new NullPointerException("name mustn't be null");
+                throw new NullPointerException("name mustn't be null.");
             }
             if (city == null) {
-                throw new NullPointerException("city mustn't be null");
+                throw new NullPointerException("city mustn't be null.");
             }
             return new CityInfo(name, city);
         }
