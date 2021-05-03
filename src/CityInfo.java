@@ -3,6 +3,11 @@ public class CityInfo {
     private final String name;
     private final String city;
 
+    /**
+     * 城市
+     * @param name 简称
+     * @param city 省会
+     */
     public CityInfo(String name, String city) {
         this.name = name;
         this.city = city;
@@ -21,6 +26,7 @@ public class CityInfo {
     }
 
     public static class CityInfoBuilder {
+
         private String name;
         private String city;
 
@@ -35,15 +41,6 @@ public class CityInfo {
         }
 
         public CityInfo build() {
-            if (name == null && city == null) {
-                throw new NullPointerException("name and city mustn't be null.");
-            }
-            if (name == null) {
-                throw new NullPointerException("name mustn't be null.");
-            }
-            if (city == null) {
-                throw new NullPointerException("city mustn't be null.");
-            }
             return new CityInfo(name, city);
         }
     }
